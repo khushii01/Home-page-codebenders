@@ -16,7 +16,8 @@ let header = $(`
    <li class="nav-item"><a class="nav-link" href="#main_about" style="color: white !important;">About</a></li>
    <li class="nav-item"><a class="nav-link" href="events.html" style="color: white !important;">Events</a></li>
    <li class="nav-item"><a class="nav-link" href="team.html" style="color: white !important;">Our Teams</a></li>
-   <li class="nav-item"><a class="nav-link" href="#" style="color: white !important;">Opportunities</a></li>
+   <li class="nav-item"><a class="nav-link" href="Opportunities.html" style="color: white !important;">Opportunities</a></li>
+   <li class="nav-item"><a class="nav-link" href="Resources.html" style="color: white !important;">Resources</a></li>
   </ul>
 </div>
 </nav>`);
@@ -49,32 +50,31 @@ let footer = $(`
 
 
 // Window Loads
-$(function () {
+$(function() {
     let bodyElement = $(`body`);
     bodyElement.prepend(header);
     bodyElement.append(footer);
-  
-//toggler hamburger functions
+
+    //toggler hamburger functions
     const menuBtn = document.querySelector('.navbar-toggler');
     let menuOpen = false;
     menuBtn.addEventListener('click', () => {
-      if(!menuOpen){
-        menuBtn.classList.add('open')
-        menuOpen = true;
-      }
-      else{
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-      }
-  });
+        if (!menuOpen) {
+            menuBtn.classList.add('open')
+            menuOpen = true;
+        } else {
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+        }
+    });
 
 });
 
 // function for toggling hamburger is-active class
-$(function(){
-  
-  $("#js-hamburger").on("click", function(){
-    $(this).toggleClass('is-active');
-  });
+$(function() {
+
+    $("#js-hamburger").on("click", function() {
+        $(this).toggleClass('is-active');
+    });
 
 });
