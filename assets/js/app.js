@@ -1,8 +1,8 @@
 'use strict';
 
 let header = $(`
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-<a class="navbar-brand" href="index.html">CodeBenders </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: #000 !important;">
+<a class="navbar-brand" href="index.html" style="color: #23B6A7 !important;">CodeBenders </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
   <div id="js-hamburger" class="hamburger">
     <span class="first"></span>
@@ -12,11 +12,11 @@ let header = $(`
 </div>
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
-   <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-   <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-   <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-   <li class="nav-item"><a class="nav-link" href="#">Our Teams</a></li>
-   <li class="nav-item"><a class="nav-link" href="#">Opportunities</a></li>
+   <li class="nav-item"><a class="nav-link" href="index.html" style="color: white !important;">Home</a></li>
+   <li class="nav-item"><a class="nav-link" href="#main_about" style="color: white !important;">About</a></li>
+   <li class="nav-item"><a class="nav-link" href="events.html" style="color: white !important;">Events</a></li>
+   <li class="nav-item"><a class="nav-link" href="team.html" style="color: white !important;">Our Teams</a></li>
+   <li class="nav-item"><a class="nav-link" href="#" style="color: white !important;">Opportunities</a></li>
   </ul>
 </div>
 </nav>`);
@@ -36,7 +36,7 @@ let footer = $(`
       </div>
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
           <div class="form-style-6">
-            <h6 class="display">Get in Touch via: </h6>
+            <h6 class="display">Contact: </h6>
             <a href="igdtuwcodebenders@gmail.com" class="mail">igdtuwcodebenders@gmail.com</a>
           </div>
         </div>
