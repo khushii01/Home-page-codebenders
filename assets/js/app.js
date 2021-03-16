@@ -1,7 +1,7 @@
 'use strict';
 
 let header = $(`
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: #000 !important;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background: linear-gradient(to bottom, #383838 0%, #000000 100%); !important;">
 <a class="navbar-brand" href="index.html" style="color: #23B6A7 !important;">CodeBenders </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
   <div id="js-hamburger" class="hamburger">
@@ -55,26 +55,15 @@ $(function() {
     bodyElement.prepend(header);
     bodyElement.append(footer);
 
-    //toggler hamburger functions
-    const menuBtn = document.querySelector('.navbar-toggler');
-    let menuOpen = false;
-    menuBtn.addEventListener('click', () => {
-        if (!menuOpen) {
-            menuBtn.classList.add('open')
-            menuOpen = true;
-        } else {
-            menuBtn.classList.remove('open');
-            menuOpen = false;
-        }
-    });
-
 });
 
-// function for toggling hamburger is-active class
-$(function() {
 
-    $("#js-hamburger").on("click", function() {
-        $(this).toggleClass('is-active');
-    });
 
-});
+// $(document).ready(function(){
+//   $(window).scroll(function(){
+//       if($(window).scrollTop() > $(window).height()){
+//         $(".navbar").css({"color":"red"});     
+//       }
+
+//   });
+// });
