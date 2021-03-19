@@ -25,10 +25,30 @@
     <link rel="stylesheet" href="assets/style/style_about.css"/>
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs"/>
+
+    <!-- loading section -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <link rel="stylesheet" href="assets/style/load.css"/>
+    <script>
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".loading").fadeOut("slow");;
+	});
+    </script>
 </head>
 
 <body>
-
+    <div class="loading">
+    <div id="circle_container">
+        <div id="stars"></div>
+        <div id="load_wrapper">
+          <div id="sun"></div>
+          <div id="moon"></div>
+        </div>
+      </div>
+      <h1 id="loading_text">Loading</h1>
+      </div>
     <!--Dynamic Nav Bar-->
      
     <!--Parallax effect-->
@@ -125,6 +145,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
     <script src="assets/js/particle.js"></script>
+    <script>
+    function getRandom (size)
+{
+  return Math.floor(Math.random() * size);
+}
+
+//Creating the layers for the stars
+for (i = 2; i < 12; i++)
+{
+  $("#stars").append('<div class="star_layer" style="transform: translateZ(' + i + 'px) scale(' + (15 - i)/(15) +');"></div>')
+}
+
+//Creating the stars
+for (i = 0; i < 70; i++)
+{
+  $(".star_layer").eq(getRandom(10)).append('<div class="star"></div>');
+}
+
+updateStars();
+
+//Change stars every cycle
+setInterval(updateStars, 4000);
+
+//Randomising stars. Position and opacity is changed every cycle.
+function updateStars ()
+{
+  $(".star").each(function() {
+    $(this).css({"top": getRandom(200) + "px", "left": getRandom(200) + "px", "opacity": (20 + getRandom(50))/100});
+  });
+}
+</script>
 
 </body>
 
