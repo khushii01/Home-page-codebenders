@@ -3,6 +3,18 @@
 @import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
 
 /* Box Model */
+h2 {
+    color: #fff6a9;
+    font-family: 'Sacramento';
+    font-size: 120px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px auto 0;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    position: relative;
+    z-index: -1 !important;
+}
 p {
     margin: 0 0 2em 0;
 }
@@ -14,7 +26,7 @@ h3{
 }
 
 h3 a{
-    color: inherit;
+    
     text-decoration: none;
 }
 
